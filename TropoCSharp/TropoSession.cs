@@ -17,6 +17,7 @@ namespace TropoCSharp.Tropo
         {
             JObject session = JObject.Parse(json);
             AccountId = (string)session["session"]["accountId"];
+            ApplicationId = (string)session["session"]["applicationId"];
             Id = (string)session["session"]["id"];
             InitialText = (string)session["session"]["initialText"];
             Timestamp = (string)session["session"]["timestamp"];
@@ -72,6 +73,11 @@ namespace TropoCSharp.Tropo
         /// Contains the user account ID that started this session.
         /// </summary>
         public string AccountId { get; set; }
+
+        /// <summary>
+        /// Contains the user application ID that started this session.
+        /// </summary>
+        public string ApplicationId { get; set; }
 
         /// <summary>
         /// Contains the elements that identify the origination of the session.

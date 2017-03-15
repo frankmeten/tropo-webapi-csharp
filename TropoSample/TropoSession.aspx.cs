@@ -31,6 +31,8 @@ namespace TropoSamples
                     tropo.Say("The channel of the calling party is " + tropoSession.From.Channel);
                     tropo.Say("This initial text sent with the call is " + tropoSession.InitialText);
                     tropo.Say("The From SIP header on the call is " + TropoUtilities.removeQuotes(tropoSession.Headers["From"]));
+                    tropo.Say("account id  is " + tropoSession.AccountId);
+                    tropo.Say("application id  is " + tropoSession.ApplicationId);
                 }
 
                 catch (JsonReaderException)
